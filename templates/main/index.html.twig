@@ -12,6 +12,7 @@
 {% endblock %}
 {% block body %}
 {# {{dump(data)}} #}
+
 <div id="calendrier">
 
 </div>
@@ -35,11 +36,11 @@
             eventResizableFromStart: true
            
         })
-        
+
         calendar.on('eventChange', (e)=>{
             let url = `/api/${e.event.id}/edit`
             let donnees = {
-                "tiltle": e.event.title,
+                "title": e.event.title,
                 "description": e.event.extendedProps.description,
                 "start": e.event.end,
                 "backgroundColor": e.event.backgroundColor,
@@ -55,4 +56,5 @@
         calendar.render()
     }
 </script>
+
 {% endblock %}

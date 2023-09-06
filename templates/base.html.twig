@@ -10,6 +10,10 @@
         {% block javascripts %}
         {% endblock %}
     </head>
+    <nav>
+        <a href="{{path('app_calendar_index')}}">Liste RDV</a>
+        <a href="{{path('app_main')}}">Calendrier</a>
+    </nav>
     <body>
         {% block body %}{% endblock %}
     </body>
